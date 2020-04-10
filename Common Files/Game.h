@@ -30,9 +30,9 @@ extern int configNetOutputsWithLF;
 extern int configNetOutputsTCPPort;
 extern int configNetOutputsUDPBroadcastPort;
 
-static bool init = false;
-static wchar_t* settingsFilename = TEXT(".\\OutputBlaster.ini");
-static int SleepA = GetPrivateProfileInt(TEXT("Settings"), TEXT("Sleep"), 16, settingsFilename);
+extern bool init;
+extern const wchar_t* settingsFilename;
+extern int SleepA;
 
 class Helpers {
 public:

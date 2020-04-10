@@ -23,6 +23,11 @@ typedef unsigned char U8;
 
 Helpers * helpers = new Helpers();
 
+bool init = false;
+const wchar_t* settingsFilename = TEXT(".\\OutputBlaster.ini");
+int SleepA = 16;
+
+
 int configOutputsSystem = GetPrivateProfileInt(TEXT("Settings"), TEXT("OutputsSystem"), 0, settingsFilename);
 int configNetOutputsWithLF = GetPrivateProfileInt(TEXT("Settings"), TEXT("NetOutputsWithLF"), 0, settingsFilename);
 int configNetOutputsTCPPort = GetPrivateProfileInt(TEXT("Settings"), TEXT("NetOutputsTCPPort"), 8000, settingsFilename);
