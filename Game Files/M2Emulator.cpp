@@ -13,21 +13,23 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Output Blaster.If not, see < https://www.gnu.org/licenses/>.*/
 
-#include "InitialD5.h"
+#include "M2Emulator.h"
 
 static int WindowsLoop()
 {
-	BYTE outputdata1 = *(BYTE*)(0x93D879D);
-	BYTE outputdata2 = *(BYTE*)(0x93D879E);
-	INT_PTR FFB = *(INT_PTR*)0x8CB6122;
+	imageBase = (uintptr_t)GetModuleHandleA(0);
+	INT_PTR Rambase = *(INT_PTR*)(imageBase + 0x1AA888);
+	INT_PTR RambaseA = *(INT_PTR*)(Rambase + 0x100);
+	BYTE data = *(BYTE*)(RambaseA + 0x824);
 
-	Outputs->SetValue(OutputLampStart, !!(outputdata1 & 0x80));
-	Outputs->SetValue(OutputLampView1, !!(outputdata1 & 0x40));
-	Outputs->SetValue(OutputLampSelectUp, !!(outputdata1 & 0x02));
-	Outputs->SetValue(OutputLampSelectDown, !!(outputdata1 & 0x01));
-	Outputs->SetValue(OutputLampSelectLeft, !!(outputdata2 & 0x80));
-	Outputs->SetValue(OutputLampSelectRight, !!(outputdata2 & 0x40));
-	Outputs->SetValue(OutputFFB, FFB);
+	Outputs->SetValue(OutputLampStart, !!(data & 0x04));
+	Outputs->SetValue(OutputLampLeader, !!(data & 0x80));
+	Outputs->SetValue(OutputLampView1, !!(data & 0x08));
+	Outputs->SetValue(OutputLampView2, !!(data & 0x10));
+	Outputs->SetValue(OutputLampView3, !!(data & 0x20));
+	Outputs->SetValue(OutputLampView4, !!(data & 0x40));
+	Outputs->SetValue(OutputRawLamps, data);
+
 	return 0;
 }
 
@@ -40,12 +42,12 @@ static DWORD WINAPI OutputsAreGo(LPVOID lpParam)
 	}
 }
 
-void InitialD5::OutputsGameLoop()
+void M2Emulator::OutputsGameLoop()
 {
 	if (!init)
 	{
-		Outputs = CreateOutputsFromConfig();
-		m_game.name = "Initial D Arcade Stage 5";
+		Outputs = new CWinOutputs();
+		m_game.name = "M2 Emulator";
 		Outputs->SetGame(m_game);
 		Outputs->Initialize();
 		Outputs->Attached();

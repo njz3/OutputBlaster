@@ -60,11 +60,11 @@ static DWORD WINAPI OutputsAreGo(LPVOID lpParam)
 	while (true)
 	{
 		WindowsLoop();
-		Sleep(16);
+		Sleep(SleepA);
 	}
 }
 
-void  ChaseHQ2::OutputsGameLoop()
+void ChaseHQ2::OutputsGameLoop()
 {
 	if (!init)
 	{
