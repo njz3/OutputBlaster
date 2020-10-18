@@ -84,19 +84,16 @@ static int WindowsLoop()
 				{
 					double percentForce = ((Gun1pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->Rumble(percentForce, percentForce, percentLength);
 				}
 				else if (HowtoRumbleGunEffect == 1)
 				{
 					double percentForce = ((Gun1pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->Rumble(0, percentForce, percentLength);
 				}
 				else if (HowtoRumbleGunEffect == 2)
 				{
 					double percentForce = ((Gun1pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->Rumble(percentForce, 0, percentLength);
 				}
 			}
 		}
@@ -121,19 +118,16 @@ static int WindowsLoop()
 				{
 					double percentForce = ((Gun1pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->Rumble(percentForce, percentForce, percentLength);
 				}
 				else if (HowtoRumbleGunEffect == 1)
 				{
 					double percentForce = ((Gun1pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->Rumble(0, percentForce, percentLength);
 				}
 				else if (HowtoRumbleGunEffect == 2)
 				{
 					double percentForce = ((Gun1pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->Rumble(percentForce, 0, percentLength);
 				}
 			}
 		}
@@ -149,19 +143,16 @@ static int WindowsLoop()
 				{
 					double percentForce = ((Gun2pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->RumbleDevice2(percentForce, percentForce, percentLength);
 				}
 				else if (HowtoRumbleGunEffect == 1)
 				{
 					double percentForce = ((Gun2pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->RumbleDevice2(0, percentForce, percentLength);
 				}
 				else if (HowtoRumbleGunEffect == 2)
 				{
 					double percentForce = ((Gun2pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->RumbleDevice2(percentForce, 0, percentLength);
 				}
 			}
 		}
@@ -186,19 +177,16 @@ static int WindowsLoop()
 				{
 					double percentForce = ((Gun2pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->RumbleDevice2(percentForce, percentForce, percentLength);
 				}
 				else if (HowtoRumbleGunEffect == 1)
 				{
 					double percentForce = ((Gun2pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->RumbleDevice2(0, percentForce, percentLength);
 				}
 				else if (HowtoRumbleGunEffect == 2)
 				{
 					double percentForce = ((Gun2pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->RumbleDevice2(percentForce, 0, percentLength);
 				}
 			}
 		}
@@ -214,19 +202,16 @@ static int WindowsLoop()
 				{
 					double percentForce = ((Flame1pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->Rumble(percentForce, percentForce, percentLength);
 				}
 				else if (HowtoRumbleFlameEffect == 1)
 				{
 					double percentForce = ((Flame1pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->Rumble(0, percentForce, percentLength);
 				}
 				else if (HowtoRumbleFlameEffect == 2)
 				{
 					double percentForce = ((Flame1pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->Rumble(percentForce, 0, percentLength);
 				}
 			}
 		}
@@ -251,19 +236,16 @@ static int WindowsLoop()
 				{
 					double percentForce = ((Flame2pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->RumbleDevice2(percentForce, percentForce, percentLength);
 				}
 				else if (HowtoRumbleFlameEffect == 1)
 				{
 					double percentForce = ((Flame2pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->RumbleDevice2(0, percentForce, percentLength);
 				}
 				else if (HowtoRumbleFlameEffect == 2)
 				{
 					double percentForce = ((Flame2pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->RumbleDevice2(percentForce, 0, percentLength);
 				}
 			}
 		}
@@ -288,19 +270,16 @@ static int WindowsLoop()
 				{
 					double percentForce = ((Health1pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->Rumble(percentForce, percentForce, percentLength);
 				}
 				else if (HowtoRumbleHealthEffect == 1)
 				{
 					double percentForce = ((Health1pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->Rumble(0, percentForce, percentLength);
 				}
 				else if (HowtoRumbleHealthEffect == 2)
 				{
 					double percentForce = ((Health1pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->Rumble(percentForce, 0, percentLength);
 				}
 			}
 		}
@@ -325,19 +304,16 @@ static int WindowsLoop()
 				{
 					double percentForce = ((Health2pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->RumbleDevice2(percentForce, percentForce, percentLength);
 				}
 				else if (HowtoRumbleHealthEffect == 1)
 				{
 					double percentForce = ((Health2pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->RumbleDevice2(0, percentForce, percentLength);
 				}
 				else if (HowtoRumbleHealthEffect == 2)
 				{
 					double percentForce = ((Health2pStrength) / 100.0);
 					double percentLength = configFeedbackLength;
-					//triggers->RumbleDevice2(percentForce, 0, percentLength);
 				}
 			}
 		}
